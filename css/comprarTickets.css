@@ -1,0 +1,509 @@
+
+:root{
+    --border-color: rgb(0, 0, 0);
+}
+
+
+html{
+    box-sizing: border-box;
+}
+
+
+.contenedorTotal{
+    
+  
+    max-width: 250px;
+    margin: -250px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descuentos{
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+
+.descuentos >*{
+    box-shadow: 1px 2px .2rem .1rem gray;
+    margin-top: 10px;
+    
+}
+
+
+.descuentos__descuento{
+max-width: 300px;
+height: 180px;
+margin: 8px;
+padding: 10px;
+
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+transition: transform .5s;
+}
+
+
+
+.descuentos__descuento:hover{
+    transform: scale(1.05);
+}
+
+ .descuento__opciones{
+   color: black;
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+
+.descuento__texto{
+color: rgb(87, 86, 86);
+font-size: 0.9rem;
+}
+
+.descuento__porcentaje{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+.descuento__requerimientos{
+    color: rgb(87, 86, 86);
+    font-size: 0.8rem;
+} 
+
+.border-azul{
+    border: 1.3px solid rgb(0, 123, 255);
+   
+}
+
+
+.border-celeste{
+    border: 1.3px solid rgb(23, 162, 184);
+    
+}
+
+
+.border-amarillo{
+    border: 1.3px solid rgb(255, 193, 7);
+    
+}
+
+
+
+.h1-tickets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   text-shadow: 2.5px 0 rgb(209, 207, 207);
+    margin: 70px 0;
+    
+   
+   }
+
+.h1-tickets__venta{
+    font-size: .5rem;
+    margin-bottom: 5px;
+  }
+
+
+  .contenedorValor{
+    position: relative;
+
+    height: 60px;
+    border-radius: 5px;
+
+
+    overflow: hidden;
+    padding: 10px;
+  }
+
+
+  .h1-tickets__valor{
+    
+    margin: 0 auto;
+    text-align: center;
+    
+    padding: 6px;
+    font-size: 1rem;
+    border-radius: 5px;
+
+  
+    
+  }
+ 
+
+
+
+/* ......... ANIMACIÓN PRECIO TICKETS.......... */
+
+
+.contenedorValor span:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    border: 2px dotted rgba(255, 0, 0, 0.896);
+   
+   animation: animate-2 4s linear infinite;
+}
+ 
+
+@keyframes animate-2{
+    0%{
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(100%);
+        opacity: .2;
+    }
+    51%{
+       opacity: 0;
+    }
+    100%{
+      opacity: 0;
+    }
+    
+
+}
+
+
+
+
+ 
+
+.contenedorValor span:nth-child(3){
+    position: absolute;
+    bottom: 0%;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+   /* box-shadow: 0px 0 .3rem .05rem var(--border-color);
+    */border: 2px dotted rgba(255, 0, 0, 0.896);
+   animation: animate-3 4s linear infinite 1s;
+}
+
+@keyframes animate-3{
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(200%);
+        opacity: .2;
+    }
+    51%{
+       opacity: 0;
+    }
+    100%{
+      opacity: 0;
+    }
+    
+
+}
+ 
+
+
+.contenedorValor span:nth-child(4){
+    position: absolute;
+    bottom: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    border: 2px dotted rgba(255, 0, 0, 0.896);
+   animation: animate-4 4s linear infinite 2s;
+}
+ 
+@keyframes animate-4{
+    0%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-200%);
+        opacity: .2;
+    }
+    51%{
+       opacity: 0;
+    }
+    100%{
+      opacity: 0;
+    }
+    
+
+}
+
+
+
+
+
+
+.contenedorValor span:nth-child(5){
+    position: absolute;
+    top: 0%;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    /*box-shadow: 0px 0 .3rem .05rem var(--border-color);
+    */
+    border: 2px dotted rgba(248, 62, 62, 0.896);
+   animation: animate-5 4s linear infinite 3s;
+}
+
+@keyframes animate-5{
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(-200%);
+        opacity: .2;
+    }
+    51%{
+       opacity: 0;
+    }
+    100%{
+      opacity: 0;
+    }
+    
+
+}
+
+ 
+  
+ 
+
+
+/*...........FORMULARIO-TICKETS...............*/
+
+.formularioTickets__formulario{
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.formulario__inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+
+}
+
+.inputs__separador{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputs__input{
+    display: block;
+    color: red;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.738);
+    border-radius: 4px;
+   margin: 10px 0;
+   font-size: .75rem;
+   padding: 4px 6px;
+  
+}
+
+
+
+
+
+
+
+.margin-borderRadius{
+    margin: 10px 0;
+    border-radius: 4px;
+    height: 25px;
+    border: 1px solid gray;
+    padding-left: 5px;
+}
+
+
+/*............Estilo del input cuando se ingresaron datos correctos........*/
+
+.is-valid{
+    
+        border: 2px solid rgb(27, 121, 27);
+      
+  
+}
+
+
+
+  /*  Manejo de estilo CSS de input cuando se ingresaron datos inválidos
+ */
+
+
+.is-invalid{
+    background-color: rgb(252, 191, 191);
+    animation: OpacityError 1.2s linear infinite;
+}
+
+
+@keyframes OpacityError{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .5;
+    }
+   100%{
+        opacity: 1;
+    }
+}
+
+
+/* ................................................................... */
+
+
+
+.inputs__div .error{
+    text-align: center;
+}
+
+
+
+
+/*..........MANEJO DE MENSAJES DE ERROR........... */
+
+.error{
+    background-color: rgb(243, 180, 180);
+    border: 1px solid red;
+    text-align: center;
+    color: red;
+    border-radius: 4px;
+    margin: -10px 0 10px 0;
+    font-size: .75rem;
+    padding: 0px 6px;
+    opacity: 0;  /* el mje de Error ya está ocupando su espacio en el HTML 
+                      pero sin verse (se verá cuando los datos sean inválidos
+                      aplicándosele la clase .opacity-1) */
+
+}
+
+
+.opacity-1{
+    opacity: 1; /*  hace visible el mje de Error */
+}
+
+
+/* ..................................................... */
+
+
+
+.resumenes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.width-49{
+    display: inline-block;
+    width: 49%;
+}
+
+.inputs__div{
+    width: 49%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputs__div >*{
+    width: 100%;
+    text-align: start;
+}
+
+.totalAPagar{
+    width: 100%;
+    font-size: 1rem;
+    color: rgb(0, 100, 184);
+    background-color: rgb(204, 229, 255);
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+
+
+
+
+
+/* ..........  MEDIA QUERIES......
+ */
+
+
+@media screen and (min-width: 400px){
+    .contenedorTotal{
+    
+        max-width: 350px;
+        margin: -260px auto;
+    }
+}
+
+
+@media screen and (min-width: 576px){
+    .contenedorTotal{
+    
+        max-width: 500px;
+        margin: -260px auto;
+    }
+    .descuentos{
+      
+        justify-content: center;
+        }
+        
+.h1-tickets__venta{
+    font-size: .6rem;
+    
+  }
+
+  .h1-tickets__valor{
+    font-size: 1.5rem;
+  }
+  .formularioTickets__formulario{
+    width: 75%;
+   
+
+}
+}
+
+
+
+@media screen and (min-width: 992px){
+    .contenedorTotal{
+    
+       max-width: 960px;
+        margin: 160px auto;
+    }
+    .descuentos{
+  
+        justify-content: center;
+        }
+        .formularioTickets__formulario{
+            width: 58%;
+           
+        
+        }
+}

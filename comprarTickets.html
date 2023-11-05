@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Integrador front | Gisele Gonzalez</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/comprarTickets.css">
+</head>
+<body>
+    <header>
+
+       <div class="header__pseudoNavegador"></div>
+
+      
+
+<!--
+               (SE VE A < 992px)
+  
+  
+       LOGO/NAVEGADOR CON btn BOOTSTRAP 
+
+  incorporé el LOGO y texto-logo dentro del código de Bootstrap
+  (tiene switch display-none  en la div superior
+  que se hace efectivo recién a > 992px, ocultando el navegador de BS y dejando que se vea
+  el navegador con código CSS MÍO) --------------------------------->
+
+     <div class="navegador-header display-none">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html#conferencia">
+                <img src="assets/img/codoacodo.png"class="img-logo" alt="Logo Codo a Codo 4.0" loading="lazy">      
+                <h2 class="h2-logo">Conf. Bs.As.</h2>
+           </a>
+             
+          
+          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse margin-top navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav bg-black-transp alto-menu">
+                <li class="nav-item">
+                  <a class="menu color-white active" aria-current="page" href="index.html#conferencia">La conferencia</a>
+                </li>
+                <li class="nav-item">
+                  <a class="menu" href="index.html#oradores">Los oradores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="menu" href="index.html#lugarFecha">El lugar y la fecha</a>
+                </li>
+                <li class="nav-item">
+                  <a class="menu" href="index.html#formularioOrador">Conviértete en orador</a>
+                </li>
+                <li class="nav-item">
+                  <a class="menu color-green disabled" href="">Comprar tickets</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+ 
+      <!--  ***** CÓDIGO CSS MÍO *******
+       
+              (SE VE A > 992px)
+
+        LOGO/NAVEGADOR con código CSS mío (switch en la section con "visibility: hidden" inicial en 
+        la clase "header__contenedorTotal", que se
+        "enciende" con "visibility: visible" a > 992px)-->
+
+        <section class="header__contenedorTotal">
+            <div class="header__contenedorTotal__contenedorLogo">
+                <a href="index.html" class="contenedorLogo__anclaLogo">  
+                    <img src="assets/img/codoacodo.png" class="anclaLogo__img" alt="Logo Codo a Codo 4.0" loading="lazy">      
+                </a>
+                <h2 class="contenedorLogo__h2">Conf. Bs.As.</h2>
+            </div>
+            
+           
+            <nav class="header__contenedorTotal__nav">
+               
+                <ul class="nav__ulHeader">
+                    <li  class="ulHeader__liHeader"><a class="liHeader__ancla liHeader__ancla--colorWhite" href="index.html#conferencia">La conferencia</a></li>
+                    <li  class="ulHeader__liHeader"><a class="liHeader__ancla" href="index.html#oradores">Los oradores</a></li>
+                    <li  class="ulHeader__liHeader"><a class="liHeader__ancla" href="index.html#lugarFecha">El lugar y la fecha</a></li>
+                    <li  class="ulHeader__liHeader"><a class="liHeader__ancla" href="index.html#formularioOrador">Conviértete en orador</a></li>
+                    <li  class="ulHeader__liHeader"><a class="liHeader__ancla liHeader__ancla--colorGreen" href="">Comprar tickets</a></li>
+                  
+                </ul>
+            </nav>
+         
+
+        </section>
+       
+        
+
+    
+    </header>
+    
+     
+    <main>
+     <div class="contenedorTotal">
+      <section class="descuentos">
+        <div class="descuentos__descuento border-azul">
+            <p class="descuento__opciones">Estudiante</p>
+            <p class="descuento__texto">Tienen un descuento</p>
+            <p class="descuento__porcentaje">80%</p>
+            <p class="descuento__requerimientos">* presentar documentación</p>
+        </div>
+        <div class="descuentos__descuento border-celeste">
+            <p class="descuento__opciones">Trainee</p>
+            <p class="descuento__texto">Tienen un descuento</p>
+            <p class="descuento__porcentaje">50%</p>
+            <p class="descuento__requerimientos">* presentar documentación</p>
+        </div>
+        <div class="descuentos__descuento border-amarillo">
+            <p class="descuento__opciones">Junior</p>
+            <p class="descuento__texto">Tienen un descuento</p>
+            <p class="descuento__porcentaje">15%</p>
+            <p class="descuento__requerimientos">* presentar documentación</p>
+        </div>
+      
+      
+      
+      </section>
+
+      
+          <h1 class="h1-tickets">
+            <div class="h1-tickets__venta">VENTA</div>
+            <div class="contenedorValor">
+                 <div class="h1-tickets__valor">VALOR DE TICKET $200</div>
+                 <span></span>
+                 <span></span>
+                 <span></span>
+                 <span></span>
+            </div>
+          </h1>
+        
+   
+   
+      <!--.............FORMULARIO...........................-->
+
+
+      <form id="form" class="formularioTickets__formulario">
+        <div class="formulario__inputs">
+           <div class="inputs__separador">
+              <input class="inputs__input selectorGeneral" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+              <div id="errorNombre" class="error">Ingrese un nombre válido</div>
+            </div>
+            <div class="inputs__separador">
+              <input class="inputs__input selectorGeneral" type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+              <div id="errorApellido" class="error">Ingrese un apellido válido</div>
+            </div>
+        </div>
+       
+        
+            <input class="width-100 margin-borderRadius selectorGeneral" type="email" id="email" placeholder="email" required>
+            <div id="errorEmail" class="error">Ingrese un email válido</div>
+
+            <div class="formulario__inputs">
+                <div class="inputs__div">
+                    <label for="cantidad">Cantidad</label>
+                    <input class="inputs__input selectorGeneral" type="number" id="cantidad" name="cantidad" placeholder="cantidad" min="1" required>
+                    <div id="errorCantidad" class="error">Ingrese una cantidad válida</div>
+
+                </div>
+                <div class="inputs__div">
+                  
+                    <label for="categoriaSelect">Categoría</label>
+                    <select class="inputs__input selectorGeneral" name="categoria" id="categoriaSelect" required>
+                      <option value="" selected>-- Seleccione --</option>
+                      <option value="0">Sin Categoria</option>
+                      <option value="1">Estudiante</option>
+                      <option value="2">Trainee</option>
+                      <option value="3">Junior</option>
+                    </select> 
+                    <div id="errorCategoria" class="error">Elija una opción</div>
+
+                </div>
+                
+            </div>
+       
+            <div class="totalAPagar">Total a pagar: $<div id="totalAPagar"></div></div>
+         <div class="resumenes">
+            <input type="reset" class="formulario__enviar width-49" id="borrar" value="Borrar">
+            <input type="submit" id="submit" class="formulario__enviar width-49" value="Resumen">
+        </div>
+     </form>
+    
+  </div>
+</main>
+    
+    
+    
+ 
+    
+    
+    <aside class="publicidad">
+     
+      </aside>
+
+
+
+
+
+    <footer class="footer">
+        <a class="footer__anclaFooter" href=""><p class="anclaFooter__p">Preguntas frecuentes</p></a>
+        <a class="footer__anclaFooter" href=""><p class="anclaFooter__p">Contáctanos</p></a>
+        <a class="footer__anclaFooter" href=""><p class="anclaFooter__p">Prensa</p></a>
+        <a class="footer__anclaFooter" href="index.html#conferencia"><p class="anclaFooter__p">Conferencias</p></a>
+        <a class="footer__anclaFooter" href=""><p class="anclaFooter__p">Términos y condiciones</p></a>
+        <a class="footer__anclaFooter" href=""><p class="anclaFooter__p">Privacidad</p></a>
+        <a class="footer__anclaFooter" href=""><p class="anclaFooter__p">Estudiantes</p></a>
+        
+    </footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+   <script src="js/comprarTickets.js"></script>
+  </body>
+</html>
